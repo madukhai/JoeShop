@@ -1,0 +1,50 @@
+325 aldergrove 
+
+  <script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+   <a href='http://casinothrill.net'>Google Map</a> 
+   <script type='text/javascript' 
+   src='http://embedmaps.com/google-maps-authorization/script.js?id=35a7cdad219ce0bbcb429cd3fd3dc74c6d2edce7'></script>
+  <script type='text/javascript'> 
+        function init_map(){
+            var myOptions = {
+                  zoom:15,center:new google.maps.LatLng(43.65305499999999,-79.39088730000003),
+                  mapTypeId: google.maps.MapTypeId.ROADMAP};
+            map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+            marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(43.65305499999999,-79.39088730000003)});
+            infowindow = new google.maps.InfoWindow({
+                  content:'<strong>My Place</strong><br>'+
+                  '89 McCaul Street<br>'+
+                  'M5T2X3 Toronto<br>'
+            });
+            google.maps.event.addListener(marker, 'click', function(){
+                  infowindow.open(map,marker);
+            });
+            infowindow.open(map,marker);
+        }
+        google.maps.event.addDomListener(window, 'load', init_map);
+  </script>
+
+  <!--starts-contact-->
+  <div class="contact" id="contact">
+      <!-- <div class ="contact-left"> -->
+        <!-- <div style='overflow:hidden;height:448px;width:716.8px;'> -->
+        <div id='gmap_canvas' style='height:448px;width:716.8px;'></div> 
+        <!-- </div> -->
+        <div class="contact-right">
+            <h3>Socialize</h3>
+            <img src="img/icon_fb.png" alt=""> <img src="img/icon_twitter.png" alt=""> <img src="img/icon_in.png" alt=""> 
+        </div>
+
+        <div class="contact-top">
+            <form>
+                 <input type="text" class="text" value="Name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Name';}">
+                 <input type="text" class="text" value="email address" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'email address';}">
+                 <textarea value="Message" onfocus="if(this.value == 'Message') this.value='';" onblur="if(this.value == '') this.value='Your message here';">Message</textarea><br> 
+                 <div class="sub-button">
+                      <input name="submit" type="submit" value="">
+                 </div>                
+            </form>
+        </div>
+
+        <div style="clear:both"></div> 
+  </div>

@@ -1,0 +1,31 @@
+<div class="main shopping box" >
+	<div class="catelog box pull-left" >
+		<a href ><em class="categories">All</em></a>
+		<a href ><em class="categories">mobile</em></a>
+		<a href ><em class="categories">computer</em></a>
+		<a href ><em class="categories">other</em></a>
+	</div>	
+	<div class="item-list pull-left box">
+			
+		<div class="item row pull-left box" ng-repeat="item in itemCtrl.items">	
+			id is {{item.id}}<br>
+			
+			<img class="photo" src="{{item.image}}"/>
+			
+			<div>	
+				{{item.name}}<br>	
+				<em ng-show="item.avg_rate">Average Rate: {{item.avg_rate}}/10</em>
+				<br>
+				price: {{item.price | currency}}
+				<br>
+				<input class="item-amount" type="number" ng-model="amount"/>
+				<button>Add to Cart</button>
+				<br>
+				<em>total: {{(item.price * amount || 0) | currency}}</em>
+			</div>	
+			<a ng-href='#/shopping/{{item.id}}'>details</a>	
+				
+		</div>
+		
+	</div>
+</div>	

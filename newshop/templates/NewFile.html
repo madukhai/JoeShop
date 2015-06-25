@@ -1,0 +1,39 @@
+<h2>New File</h2>
+
+
+     		 <div>
+     		 	 <div class="tab">
+           			 <div class="nav nav-pills">
+
+              			<a href="#/shopping"
+              			class="nav-pills"
+              			ng-click="selected = 'shopping'"
+              			ng-class="{'active': selected == 'shopping'}"> Shopping Now!</a>
+
+              			<a href="#/cart"
+              			class="list-item"
+              			ng-click="selected = 'cart'"
+              			ng-class="{'active': selected == 'cart'}"> Cart </a>
+						
+						<a href="#/locations"
+              			class="list-item"
+              			ng-click="selected = 'locations'"
+              			ng-class="{'active': selected == 'locations'}"> Locations </a>
+            		</div>
+          		</div>
+     		 </div>
+     		 <section class="tab" ng-controller="TabController as tab">
+       			<ul class="nav nav-pills">
+          			<li ng-class="{active: tab.isSet(1)}">
+            			<a href ng-click="tab.setTab(1)">Shopping Now!</a></li>
+          			<li ng-class="{active: tab.isSet(2)}">
+            			<a href ng-click="tab.setTab(2)">Cart</a></li>
+          			<li ng-class="{active: tab.isSet(3)}">
+            			<a href ng-click="tab.setTab(3)">Locations</a></li>
+        		</ul>
+        			
+        		<my-shopping ng-show="tab.isSet(1)"></my-shopping>        			
+  				<my-cart ng-show="tab.isSet(2)"></my-cart>       		
+        		<my-locations ng-show="tab.isSet(3)"></my-locations>
+        			
+     		 </section>

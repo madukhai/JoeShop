@@ -1,0 +1,19 @@
+
+			<section class="tab" ng-controller="TabController as tab"> 
+       			<ul class="nav nav-pills">
+          			<li ng-class="{active: tab.isSet(1)}">
+            			<a href ng-click="tab.setTab(1)">Descriptions</a></li>
+          			<li ng-class="{active: tab.isSet(2)}">
+            			<a href ng-click="tab.setTab(2)">Compare</a></li>
+          			<li ng-class="{active: tab.isSet(3)}">
+            			<a href ng-click="tab.setTab(3)">Reviews</a></li>
+        		</ul>
+        		
+        		<description ng-show="tab.isSet(1)"></description>
+        		<item-compare ng-show="tab.isSet(2)"></item-compare>
+        		<item-reviews ng-show="tab.isSet(3)"></item-reviews>
+        		
+        	
+        			
+     		 </section>
+     		 

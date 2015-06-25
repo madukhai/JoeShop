@@ -1,0 +1,14 @@
+<h3>Description</h3>
+
+
+<div ng-show="item.descriptions.size">
+	<h4>Size: </h4> {{item.descriptions.size}}
+</div>
+<div ng-show="item.descriptions.uses">
+	<h4>Uses: </h4>
+	<div ng-repeat="use in item.descriptions.uses">
+		<ul>
+			<li>{{use}}</li>
+		</ul>	
+	</div>
+</div>
